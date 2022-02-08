@@ -1,0 +1,16 @@
+{{#each all}}
+    <div class="moviesList">
+        <h2>{{title}}</h2>
+        <a href="/movies/{{_id}}">View More</a>
+    </div>
+{{/each}}
+
+
+<style>
+    .moviesList {
+        display: grid;
+        grid-template-rows: repeat(auto-fill, 2fr);
+        place-items: center;
+        margin-bottom: 30px;
+    } 
+famous

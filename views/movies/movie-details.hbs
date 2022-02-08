@@ -1,0 +1,29 @@
+
+<div class="movie">
+    <h1>Title: {{title}}</h1>
+    <h2>Genre: {{genre}}</h2>
+    <h3>Plot: {{plot}}</h3>
+
+    <h3>Cast: 
+        <div class="cast">
+            {{#each cast}}
+                <h5>Name: {{name}}</h5>
+                <h5>Occupation: {{occupation}}</h5>
+                <h5>Catchphrase: {{catchPhrase}}</h5>
+            {{/each}}
+        </div>
+    </h3>
+
+        {{!-- Edit Movie --}}
+        <a href="/movies/{{_id}}/edit-movie">Edit</a>
+
+        {{!-- Delete Movie --}}
+        <form action="/movies/{{_id}}/delete" method="post">
+            <button type="submit">Delete</button>
+        </form>
+
+</div>
+
+<style>
+    .cast { margin-top: 10px; }
+</style>
