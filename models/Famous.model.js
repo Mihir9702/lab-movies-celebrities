@@ -12,7 +12,7 @@ const famousSchema = Schema({
         default: 'Unknown'
     },
 
-    catchPhrase: String 
+    catchPhrase: String
 })
 
 const Famous = model('Famous', famousSchema)
